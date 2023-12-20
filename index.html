@@ -7,35 +7,145 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <img src="" alt="Logo" class="logo">
+    <nav class="nav-wrapper">
+        <img src="assets/logo.PNG" alt="Logo" class="logo">
         <ul class="nav-items">
-            <li>Home</li>
-            <li>Our Profile</li>
-            <li>Achievement</li>
-            <li>Message Us</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#our-profile" onclick="smoothScroll('our-profile')">Our Profile</a></li>
+            <li><a href="#achievement">Achievement</a></li>
+            <li><a href="#message">Message Us</a></li>
         </ul>
     </nav>
-    <header>
-        <h1>Hi Faza, welcome to our website</h1>
-        <h4>Please Enjoy</h4>
-        <img src="assets/header.jpg">
+    <hr>
+    <header class="header-wrapper">
+        <h1>Hi <span id="name"></span>, Welcome to our website</h1>
+        <h4>Ini adalah website latihan pertama</h4>
+        <img src="assets/banner.jpg">
         <hr>
     </header>
-    <div class="facilitations">
-        <div>
-            <div class="circle" style="background-image: url('assets/header.jpg');"></div>
-            <h4>Football Arena</h4>
+    <div class="about-us" style="background-image: url(assets/visimisi.jpg);">
+        <div class="lcr">
+            <h2>Tentang Sekolah</h2>
+            <p class="text-justify">SMA Negeri 1 Mandirancan merupakan sebuah SMA Negeri yang 
+                terletak di Kabupaten Kuningan. Alamat lengkapnya ada di 
+                Jl. Siliwangi No. 1 A, Kalurahan/Desa Mandirancan, Kecamatan Mandirancan, 
+                Kabupaten Kuningan, Jawa Barat dengan nomor NPSN 20212958.</p>
         </div>
-        <div>
-            <div class="circle"></div>
-            <h4>Auditorium</h4>
-        </div>
-        <div>
-            <div class="circle"></div>
-            <h4>Student Canteen</h4>
+        <!-- <div class="lcr">
+            <h2>About Us - Center Section</h2>
+            <p>This is the center section of our About Us.</p>
+        </div> -->
+        <div class="lcr">
+            <h2>Visi dan Misi</h2>
+            <p class="text-justify">Visi : Unggul dalam prestasi, peduli dan berbudaya 
+                lingkungan berdasarkan iman dan taqwa.</p>
+            <p class="text-justify">Misi : Mewujudkan lulusan yang beriman dan bertaqwa 
+                yang mampu bersaing memasuki Perguruan Tinggi dan Dunia Kerja dan Mewujudkan lingkungan
+             yang aman, sehat, rindang dan indah demi terciptanya suasana belajar yang kondusif.</p>
         </div>
     </div>
+    <hr>
+    <h2 class="fix" id="our-profile">Our Profile</h2>
+    <div class="our-profile" >
+        <div class="lcr">
+            <h2>Profil Sekolah</h2>
+            <p class="text-justify">SMA Negeri 1 Mandirancan, Kabupaten Kuningan
+                SMA Negeri 1 Mandirancan adalah sebuah lembaga sekolah SMA negeri yang alamatnya di Jl. Siliwangi No. 1a, Kab. Kuningan.</p>
+            <p class="text-justify">SMA negeri ini memulai kegiatan pendidikan belajar mengajarnya pada tahun 1991. Sekarang SMA Negeri 1 Mandirancan memakai 
+            panduan kurikulum belajar SMA 2013 Bhs&Budaya. SMA Negeri 1 Mandirancan berada di bawah naungan kepala sekolah dengan nama Agus 
+            Hilman ditangani oleh seorang operator yang bernama Puja Rahmatullah.</p>
+            <p class="text-justify">Akreditasi SMA Negeri 1 Mandirancan
+                SMA Negeri 1 Mandirancan terakreditasi grade A dengan nilai 96 (akreditasi tahun 2021) dari 
+                BAN-S/M (Badan Akreditasi Nasional) 
+                Sekolah/Madrasah.</p>
+        </div>
+        <!-- <div class="lcr">
+            <h2>About Us - Center Section</h2>
+            <p>This is the center section of our About Us.</p>
+        </div> -->
+        <div class="lcr">
+            <h2>Identitas Sekolah</h2>
+            <p class="text-left">NPSN : 20212958</p>
+            <p class="text-left">Status : Negeri</p>
+            <p class="text-left">Bentuk Pendidikan : SMA</p>
+            <p class="text-left">Status Kepemilikan : Pemerintah Daerah</p>
+            <p class="text-left">SK Pendirian Sekolah : 0283/0/1991</p>
+            <p class="text-left">Tanggal SK Pendirian : 1991-05-30</p>
+            <p class="text-left">SK Izin Operasional : 0283/0/1991</p>
+            <p class="text-left">Tanggal SK Izin Operasional : 1991-05-30</p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h2 class="fix">Our Facilitations</h2>
+        <div class="circle-container">
+            <div class="circle">
+                <div class="circle-icon" style="background-image: url('assets/basket.jpg');"></div>
+                <h3 class="circle-title">Basketball Arena</h3>
+            </div>
 
+            <div class="circle">
+                <div class="circle-icon" style="background-image: url('assets/parkir.jpg');"></div>
+                <h3 class="circle-title">Parking Area</h3>
+            </div>
+
+            <div class="circle">
+                <div class="circle-icon" style="background-image: url('assets/kantin.jpg');"></div>
+                <h3 class="circle-title">Student Canteen</h3>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="container">
+            <div class="left-side">
+                <div class="left-fixed">
+                <h2 class="fix">Message Us</h2>
+                <form name="message-form" onsubmit="return validateForm()">
+                    <div class="nama">
+                       <span class="nama">Nama </span><span id="nama">:</span>
+                       <input type="text" placeholder="Nama" name="full-name">
+                    </div>
+
+                    <div class="tgl">
+                        <span class="tgl">Tanggal Lahir </span><span id="tgl">:</span>
+                        <input type="date" name="birth-date">
+                    </div>
+
+                    <div class="jk">
+                        <span class="jk">Jenis Kelamin</span><span id="jk">:</span>
+                        <input class="jk" type="radio" id="male" name="gender" value="Laki-Laki">
+                        <label for="male">Laki-Laki</label>
+                        <input class="jk" type="radio" id="female" name="gender" value="Perempuan">
+                        <label for="female">Perempuan</label>
+                    </div>
+
+                    <div class="pesan">
+                        <span class="pesan">Pesan </span><span id="pesan">:</span>
+                        <textarea placeholder="Pesan" name="messages"></textarea>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+            </div>
+
+                <div class="right-side">
+                    <div class="showdata">
+                        <p><strong>Current Time:</strong> <span id="submission-time"></span></p>
+                        <br>
+                        <p><strong>Nama:</strong> <span id="sender-full-name"></span></p>
+                        <p><strong>Tanggal Lahir:</strong> <span id="sender-birth-date"></span></p>
+                        <p><strong>Jenis Kelamin:</strong> <span id="sender-gender"></span></p>
+                        <p><strong>Pesan:</strong> <span id="sender-messages"></span></p>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <hr>
+    <footer><p>@SMAN 1 MANDIRANCAN</p></footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
